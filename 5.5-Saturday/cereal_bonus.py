@@ -7,14 +7,14 @@ csvpath = os.path.join(".", "cereal_bonus.csv")
 with open(csvpath, newline="") as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
     print(csvfile)
-
+    next(csvreader)
 
 
     fiber_value = 5
 
     for row in csvreader:
        
-        if(row > 0):
+        #if (csvreader.line_num > 0):
             
-            if(float(row[7]) >= fiber_value):
-             print(row[0])
+        if(float(row[7]) >= fiber_value):
+            print(row[0])
